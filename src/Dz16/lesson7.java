@@ -2,26 +2,40 @@ package Dz16;
 
 import org.w3c.dom.ls.LSOutput;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class lesson7 {
     public static void main(String[] args) {
-        String str = "А роза упала на лапу азора";
-        String str2 = "Ароза упала на лапу азора";
-        System.out.println(str +"\n"+str2);
-        if(str.startsWith("А роза") && str.endsWith(" азора")){
-            System.out.println("\nПервая строка является палиндромом");
+        Scanner scan1 = new Scanner(System.in);
 
+        System.out.println("Введите слово:");
+        String b = scan1.nextLine();
+        System.out.println("Введите слово:");
+        String a = scan1.nextLine();
+        String[] str = {b,a};
+        String c= reverseString(str[1]);
+
+        if(Objects.equals(str[0], c))
+        {
+            System.out.println(str[0]+" является палиндромом слову "+reverseString(str[1]));
         }
-        if(str2.startsWith("А роза") != str2.endsWith(" азора")) {
-            System.out.println("\nВторая  строка не является палиндромом");
+        else
+        {
+            System.out.println("\nне является палиндромом");
         }
-        else {
-            System.out.println("Произошла ошибка ! Обе строки не являются палиндромом ");
-        }
+
+
     }
 
+    private static String reverseString(String str) {
+        char[] array = str.toCharArray();
+        String result = "";
+        for (int i = array.length - 1; i >= 0; i--) {
+            result = result + array[i];
+        }
+        return result;
+    }
 
 
 }
