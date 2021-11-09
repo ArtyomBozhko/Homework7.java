@@ -2,8 +2,8 @@ package Dz16;
 
 import org.w3c.dom.ls.LSOutput;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class lesson7 {
     public static void main(String[] args) {
@@ -38,6 +38,5 @@ public class lesson7 {
     }
 
 
-
-
 }
+
