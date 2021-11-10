@@ -17,39 +17,15 @@ public class dz14 {
            i[c] = b;
             System.out.print(i[c]);
          }
-        /*
-        for(int g = 0;g <=a-1;g++)
+        boolean cal = true;
+        for(int g =1;g <= a-1;g++ )
         {
-            if(i[g] < i[g+1])
-            {
-                cal++;
-            }
+        if(i[g-1]>i[g]){
+            cal = false;
+            break;
         }
-        
-         */
-        /*for (int g:i) {
-            int f = 1;
-            f++;
-          if(i[g] < i[f])
-          {
-              cal++;
-          }
         }
-
-         */
-
-        boolean cal;
-        for (int g = 0; g < a; g++) {
-            for (int k = 1; k < a; k++) {
-                if (i[g] < i[k]) {
-                    cal = true;
-
-                }
-
-            }
-        }
-
-        if(cal = true)
+        if(cal)
         {
             System.out.println("\nмассив строго возрастающий");
         }
