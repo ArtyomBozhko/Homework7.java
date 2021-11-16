@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class Methods {
     public static void  Massivs(int[] a, int[] a1) {
         System.out.print("Введите число от 0 до 9\n");
+
         Scanner scan1 = new Scanner(System.in);
+
         for(int g = 0; g <=a1.length - 1;g++){
             System.out.print("Введите число №"+(g+1)+" ");
             int с = scan1.nextInt();
@@ -30,19 +32,7 @@ public class Methods {
         Arrays.sort(a1);
         System.out.println(Arrays.toString(a1));
         for(int i = 0; i <= a.length-1 ;i++) {
-            int low = 0;
-            int high = a1.length - 1;
-            while(low <= high) {
-                int mid = (low + high) / 2;
-                if (a1[mid] < a[i]) {
-                    low = mid + 1;
-                } else if (a1[mid] > a[i]) {
-                    high = mid - 1;
-                } else {
-                    calc++;
-                    break;
-                }
-            }
+                if (a[i] == a1[i]) calc++;
         }
         System.out.println("\n "+calc);
     }

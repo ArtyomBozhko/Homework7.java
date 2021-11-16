@@ -13,7 +13,6 @@ public class dz17 {
         int a[] = new int[7];
         Massivs(a1,a);
         Sort(a1,a);
-
     }
 }
 
