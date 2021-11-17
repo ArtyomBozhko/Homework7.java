@@ -13,6 +13,7 @@ public static void Check(int[] a){
             a[calc] = 0;
             calc++;
 
+
         }
     }
     System.out.println(Arrays.toString(a));
